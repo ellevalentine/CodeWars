@@ -169,5 +169,67 @@ function pigIt(str){
 
 // question:
 
+// Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. 
+// The function should return true if the string is valid, and false if it's invalid.
+
+// Solution:
+
+function validParentheses(parens){
+    
+    var length = parens.length / 2;
+    
+    for (var i = 0; i <= length; ++i) {
+      parens = parens.replace('()', '');
+    }
+    
+    return parens == '';
+  
+  }
+
+  // we take the total length and half it since thats how many pairs of () we should have if true.
+  // then we remove from the middle outwards () and replace it with nothing - then by the end of the loop if the parens order was true then '' will be empty
+
+// _____________________________________________________________________________________________________________________________________________________________
+
+// question:
+
+// Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks whether the two arrays have the "same" elements, with the same multiplicities.
+// "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+
+// Solution:
+
+function comp(a1, a2){
+    if (!a1 || !a2 || a1.length !== a2.length) return false;
+    return a1.map(x => x * x).sort().toString() === a2.sort().toString();
+  }
+
+// firtly to check that the arrays are not empty or falsy and that the two arrays match in length
+// then if arrays are true and matching => to sq a1 and sort and also sort a2 - convert both to strings - in which now both strings should be identical if true
+
+// _____________________________________________________________________________________________________________________________________________________________
+
+// question:
+
+
+// Solution:
+
+// _____________________________________________________________________________________________________________________________________________________________
+
+// question:
+
+
+// Solution:
+
+// _____________________________________________________________________________________________________________________________________________________________
+
+// question:
+
+
+// Solution:
+
+// _____________________________________________________________________________________________________________________________________________________________
+
+// question:
+
 
 // Solution:
